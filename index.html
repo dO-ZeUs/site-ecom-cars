@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/css/output.css" />
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- REMIX ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <title>Ecom|Cars</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="navbar" class="sticky top-0 z-50 duration-300 shadow-lg shadow-indigo-500/50">
+    <nav class="relative container flex justify-between items-center">
+      <!-- image-logo -->
+      <div class="flex py-5 items-center">
+        <img src="./img/logo-autocar.jpg" alt="logo" id="logo" class="w-24 md:w-24">
+        <p class="text-2xl font-bold ml-3">
+          AUTO
+          <span class="text-blue-600">CAR</span>
+        </p>
+      </div>
+      <!-- menu -->
+      <div id="nav-menu" class="hidden absolute top-0 left-0 w-full py-24 bg-yellow-600 lg:block lg:bg-transparent lg:static lg:py-0 lg:border-none lg:w-auto lg:ml-auto">
+        <ul class="flex flex-col items-center text-center gap-8 lg:flex-row lg:gap-5">
+          <li>
+            <a href="#home" class="navLink">Accueil</a>
+          </li>
+          <!-- catalogue -->
+          <li>
+            <a href="#catalogue" class="navLink">Catalogue Véhicules</a>
+          </li>
+          <!-- services -->
+          <li>
+            <a href="#services" class="navLink">Services</a>
+          </li>
+          <!-- contacts -->
+          <li>
+            <a href="#contact" class="navLink">Contacts</a>
+          </li>
+          <!-- login -->
+          <li>
+            <a href="./auth/login.html" class="btn ml-10">
+                <span class="z-10">LOGIN</span>
+            </a>
+          </li>
+        </ul>
+        <!-- bouton : fermer le menu -->
+        <div id="nav-close" class="absolute top-6 right-3 md:ring-8 text-2xl cursor-pointer text-white lg:hidden">
+          <i class="ri-close-line"></i>
+        </div>     
+      </div>
+      <!-- menu responsive -->
+      <div class="gap-5">
+        <div id="menu" class="lg:hidden">
+          <i class="ri-menu-3-fill cursor-pointer text-2xl"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+   <main></main>
+</body>
+<!-- SCRIPTS JS -->
+<script src="./src/js/main.js"></script>
+</html>
