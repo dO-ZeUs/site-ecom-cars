@@ -41,7 +41,7 @@ build/
 .postcss-cache/
 
 # CSS généré automatiquement (si tu rebuild avec Tailwind)
-src/css/*.css
+src/css/output.css
 src/css/*.map
 
 # --- OS / Editor ---
