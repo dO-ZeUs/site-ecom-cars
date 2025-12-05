@@ -11,6 +11,14 @@ module.exports = {
     },
     extend: {
       colors: {},
+      keyframes: {
+        move: {
+          "50%": {transform: "scale(1.1)"}
+        }
+      },
+      animation: {
+        scaleAnimation: "move 3s linear infinite"
+      }
     },
     container: {
       center: true,

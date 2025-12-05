@@ -5,37 +5,69 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply scroll-smooth;
-  }
+	html {
+		@apply scroll-smooth;
+	}
 
-  body {
-    @apply font-poppins tracking-wider overflow-x-hidden;
-  }
+	body {
+		@apply font-poppins tracking-wider overflow-x-hidden;
+	}
+
+	section {
+		@apply py-16 md:pt-28 md:pb-20;
+	}
 }
 
 @layer components {
-  .navLink {
-    @apply font-bold relative;
-  }
+	.navLink {
+		@apply font-bold relative;
+	}
 
-  .navLink::before {
-    @apply content-[''] absolute w-full h-[2px] -bottom-[5px] left-0 scale-x-0 transition-transform ease-in-out origin-right duration-500 bg-gradient-to-r from-gray-300 to-gray-800;
-  }
+	.navLink::before {
+		@apply content-[''] absolute w-full h-[2px] -bottom-[5px] left-0 scale-x-0 transition-transform ease-in-out origin-right duration-500 bg-gradient-to-r from-gray-300 to-gray-800;
+	}
 
-  .navLink:hover::before {
-    @apply scale-x-100 origin-left;
-  }
+	.navLink:hover::before {
+		@apply scale-x-100 origin-left;
+	}
 
-  .btn {
-    @apply relative overflow-hidden bg-gradient-to-r from-blue-200 to-blue-500 px-7 py-3 rounded-full capitalize font-bold flex justify-center items-center;
-  }
+	.btn {
+		@apply relative overflow-hidden bg-gradient-to-r from-blue-200 to-blue-500 px-7 py-3 rounded-full capitalize font-bold flex justify-center items-center;
+	}
 
-  .btn::before {
-    @apply content-[''] absolute w-[100%] h-[100%] bg-gradient-to-r from-yellow-200 to-yellow-400 top-0 left-0 rounded-full scale-x-0 transition-transform ease-in-out origin-right duration-300;
-  }
+	.btn::before {
+		@apply content-[''] absolute w-[100%] h-[100%] bg-gradient-to-r from-yellow-200 to-yellow-400 top-0 left-0 rounded-full scale-x-0 transition-transform ease-in-out origin-right duration-300;
+	}
 
-  .btn:hover::before {
-    @apply scale-x-100 origin-left;
-  }
+	.btn:hover::before {
+		@apply scale-x-100 origin-left;
+	}
+
+	.btn-catalogue {
+		@apply border border-blue-600 py-4 px-9 rounded-full hover:bg-blue-400 duration-300;
+	}
+
+	.title,
+	.subtitle{
+		@apply text-4xl lg:text-6xl xl:text-[65px] font-bold bg-gradient-to-r from-gray-400 to-blue-400 inline-block text-transparent bg-clip-text pb-2;
+	}
+
+	.subtitle{
+		@apply text-3xl md:text-4xl lg:text-5xl;
+	}
+}
+
+@layer utilities {
+	/* home */
+	.social-icon {
+		@apply relative border border-blue-500 text-blue-900 h-10 w-10 rounded-full grid place-items-center cursor-pointer hover:text-black duration-300 font-bold;
+	}
+
+	.social-icon::before {
+		@apply content-[''] absolute w-[100%] h-[100%] inset-0 rounded-full scale-0 transition-transform ease-in-out duration-300;
+	}
+
+	.social-icon:hover::before {
+		@apply scale-100 origin-center;
+	}
 }
