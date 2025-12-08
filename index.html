@@ -50,7 +50,7 @@
 					</li>
 					<!-- login -->
 					<li>
-						<a href="./auth/login.html" class="btn ml-10">
+						<a href="./pages/login.html" class="btn ml-10">
 							<span class="z-10">LOGIN</span>
 						</a>
 					</li>
@@ -205,8 +205,7 @@
 
 		<!-- section: services -->
 		<section id="services" class="relative py-10">
-			<div class="container mx-auto px-4">
-
+			<div class="container">
 				<!-- Title -->
 				<div class="flex flex-col items-center gap-3 text-center mb-10">
 					<h2 class="subtitle">Nos services</h2>
@@ -215,9 +214,8 @@
 					</p>
 				</div>
 
-				<!-- Services grid -->
+				<!-- Services-->
 				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-
 					<!-- Service: Conseil automobile -->
 					<div class="bg-white rounded-xl shadow-md p-5 flex flex-col items-center text-center">
 						<img src="./img/conseil-auto.jpg" alt="Conseil automobile"
@@ -255,20 +253,111 @@
 			</div>
 		</section>
 
-
 		<!-- section: contacts -->
-		<section id="contact" class="relative py-5">
-			<div>
-				<div class="container">
-					<div>
-						<h2 class="subtitle">Contactez-nous !</h2>
+		<section id="contact" class="relative py-10">
+			<div class="container">
+				<div class="flex flex-col items-center gap-3 text-center mb-10">
+					<h2 class="subtitle">Contactez-nous !</h2>
+					<p class="max-w-2xl">
+						Une question ? Besoin d'un renseignement ? Notre équipe est disponible pour vous accompagner.
+					</p>
+				</div>
+
+				<!-- contenu -->
+				<div class="grid md:grid-cols-2 gap-10">
+					<!-- Infos -->
+					<div class="space-y-6">
+						<div>
+							<h3 class="text-xl font-semibold">Adresse</h3>
+							<p class="text-gray-600">Cotonou, Bénin</p>
+						</div>
+
+						<div>
+							<h3 class="text-xl font-semibold">Téléphone</h3>
+							<p class="text-gray-600">+229 90 00 00 00</p>
+						</div>
+
+						<div>
+							<h3 class="text-xl font-semibold">Email</h3>
+							<p class="text-gray-600">support@autocar.com</p>
+						</div>
+
+						<div>
+							<h3 class="text-xl font-semibold">Horaires</h3>
+							<p class="text-gray-600">Lundi – Samedi : 8h - 20h</p>
+						</div>
 					</div>
+
+					<!-- Formulaire -->
+					<form class="bg-white shadow-lg p-8 rounded-xl space-y-5">
+
+						<input type="text" placeholder="Votre nom"
+							class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+
+						<input type="email" placeholder="Votre email"
+							class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+
+						<textarea rows="4" placeholder="Votre message"
+							class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+
+						<button
+							class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition">
+							Envoyer le message
+						</button>
+
+					</form>
 				</div>
 			</div>
 		</section>
 	</main>
+	<!-- footer -->
+	<footer class="bg-gray-900 text-gray-300 py-10">
+		<div class="container mx-auto px-6 md:px-12">
+
+			<div class="grid md:grid-cols-3 gap-10 text-center md:text-left">
+
+				<!-- Logo + description -->
+				<div>
+					<h3 class="text-2xl font-bold text-white">
+						AUTO<span class="text-blue-600">CAR</span>
+					</h3>
+					<p class="mt-3 text-sm text-gray-400 max-w-sm">
+						Votre référence en véhicules neufs de luxe. Qualité, performance et élégance au service de votre
+						confort.
+					</p>
+				</div>
+
+				<!-- Liens rapides -->
+				<div>
+					<h3 class="text-lg font-semibold text-white mb-3">Navigation</h3>
+					<ul class="space-y-2">
+						<li><a href="#home" class="hover:text-blue-500 duration-200">Accueil</a></li>
+						<li><a href="#catalogue" class="hover:text-blue-500 duration-200">Catalogue</a></li>
+						<li><a href="#services" class="hover:text-blue-500 duration-200">Services</a></li>
+						<li><a href="#contact" class="hover:text-blue-500 duration-200">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Contact -->
+				<div>
+					<h3 class="text-lg font-semibold text-white mb-3">Nous contacter</h3>
+					<ul class="space-y-2 text-gray-400 text-sm">
+						<li>Cotonou, Bénin</li>
+						<li>+229 90 00 00 00</li>
+						<li>support@autocar.com</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!-- Ligne du bas -->
+			<div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+				© 2025 AutoCar. Tous droits réservés.
+			</div>
+		</div>
+	</footer>
 </body>
+
 <!-- SCRIPTS JS -->
 <script src="./src/js/main.js"></script>
-
 </html>
