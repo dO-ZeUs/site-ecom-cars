@@ -1,364 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./src/css/output.css" />
+        <!-- FONT AWESOME -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- REMIX ICON -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+            integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Ecom|Cars</title>
+    </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- CSS -->
-	<link rel="stylesheet" href="./src/css/output.css" />
-	<!-- FONT AWESOME -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-		integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<!-- REMIX ICON -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
-		integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<title>Ecom|Cars</title>
-</head>
+    <body>
+        <!-- HEADER -->
+        <header id="navbar" class="sticky top-0 z-50 duration-300 shadow-lg shadow-indigo-500/50 bg-transparent">
+            <nav class="relative container flex justify-between items-center">
+                <!-- image-logo -->
+                <div class="flex py-5 items-center">
+                    <img src="./img/logo-autocar.jpg" alt="logo" id="logo" class="w-24 md:w-24" />
+                    <p class="text-2xl font-bold ml-3">
+                        AUTO
+                        <span class="text-blue-600">CAR</span>
+                    </p>
+                </div>
+                <!-- menu -->
+                <div
+                    id="nav-menu"
+                    class="hidden absolute top-0 left-0 w-full py-24 bg-yellow-600 lg:block lg:bg-transparent lg:static lg:py-0 lg:border-none lg:w-auto lg:ml-auto"
+                >
+                    <ul class="flex flex-col items-center text-center gap-8 lg:flex-row lg:gap-5">
+                        <li>
+                            <a href="#home" class="navLink">Accueil</a>
+                        </li>
+                        <!-- catalogue -->
+                        <li>
+                            <a href="#catalogue" class="navLink">Catalogue Véhicules</a>
+                        </li>
+                        <!-- services -->
+                        <li>
+                            <a href="#services" class="navLink">Services</a>
+                        </li>
+                        <!-- contacts -->
+                        <li>
+                            <a href="#contact" class="navLink">Contacts</a>
+                        </li>
+                        <!-- login -->
+                        <li>
+                            <a href="./pages/auth/login.html" class="btn ml-10">
+                                <span class="z-10">LOGIN</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- bouton : fermer le menu -->
+                    <div id="nav-close" class="absolute top-6 right-3 md:ring-8 text-2xl cursor-pointer text-white lg:hidden">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+                <!-- menu responsive -->
+                <div class="gap-5">
+                    <div id="menu" class="lg:hidden">
+                        <i class="ri-menu-3-fill cursor-pointer text-2xl"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-<body>
-	<!-- HEADER -->
-	<header id="navbar" class="sticky top-0 z-50 duration-300 shadow-lg shadow-indigo-500/50 bg-transparent">
-		<nav class="relative container flex justify-between items-center">
-			<!-- image-logo -->
-			<div class="flex py-5 items-center">
-				<img src="./img/logo-autocar.jpg" alt="logo" id="logo" class="w-24 md:w-24">
-				<p class="text-2xl font-bold ml-3">
-					AUTO
-					<span class="text-blue-600">CAR</span>
-				</p>
-			</div>
-			<!-- menu -->
-			<div id="nav-menu"
-				class="hidden absolute top-0 left-0 w-full py-24 bg-yellow-600 lg:block lg:bg-transparent lg:static lg:py-0 lg:border-none lg:w-auto lg:ml-auto">
-				<ul class="flex flex-col items-center text-center gap-8 lg:flex-row lg:gap-5">
-					<li>
-						<a href="#home" class="navLink">Accueil</a>
-					</li>
-					<!-- catalogue -->
-					<li>
-						<a href="#catalogue" class="navLink">Catalogue Véhicules</a>
-					</li>
-					<!-- services -->
-					<li>
-						<a href="#services" class="navLink">Services</a>
-					</li>
-					<!-- contacts -->
-					<li>
-						<a href="#contact" class="navLink">Contacts</a>
-					</li>
-					<!-- login -->
-					<li>
-						<a href="./pages/auth/login.html" class="btn ml-10">
-							<span class="z-10">LOGIN</span>
-						</a>
-					</li>
-				</ul>
-				<!-- bouton : fermer le menu -->
-				<div id="nav-close"
-					class="absolute top-6 right-3 md:ring-8 text-2xl cursor-pointer text-white lg:hidden">
-					<i class="ri-close-line"></i>
-				</div>
-			</div>
-			<!-- menu responsive -->
-			<div class="gap-5">
-				<div id="menu" class="lg:hidden">
-					<i class="ri-menu-3-fill cursor-pointer text-2xl"></i>
-				</div>
-			</div>
-		</nav>
-	</header>
+        <!-- MAIN -->
+        <main>
+            <!-- section:home -->
+            <section id="home" class="relative py-5">
+                <div class="absolute left-0 bottom-0 w-80 h-80"></div>
 
-	<!-- MAIN -->
-	<main>
-		<!-- section:home -->
-		<section id="home" class="relative py-5">
-			<div class="absolute left-0 bottom-0 w-80 h-80"></div>
+                <div class="container">
+                    <!-- image -->
+                    <div class="hidden md:block absolute top-0 left-[30%] lg:left-[35%] animate-scaleAnimation">
+                        <p class="font-montserrat text-[400px] uppercase -z-10 opacity-5 text-cyan-600 lg:text-[450px]">hi</p>
+                    </div>
+                    <!-- home content -->
+                    <div class="flex items-center gap-5">
+                        <div class="space-y-2 md:w-1/2">
+                            <h3 class="text-2xl font-bold md:text-3xl lg:text-4xl">Bienvenue</h3>
+                            <h2>
+                                <span class="title">Magasin</span>
+                                <br />
+                                <span class="title">Auto Car</span>
+                            </h2>
+                            <!-- bio -->
+                            <div class="relative flex justify-center md:hidden">
+                                <div class="absolute left-0 bottom-0 w-80 h-80"></div>
 
-			<div class="container">
-				<!-- image -->
-				<div class="hidden md:block absolute top-0 left-[30%] lg:left-[35%] animate-scaleAnimation">
-					<p class="font-montserrat text-[400px] uppercase -z-10 opacity-5 text-cyan-600 lg:text-[450px]">hi
-					</p>
-				</div>
-				<!-- home content -->
-				<div class="flex items-center gap-5">
-					<div class="space-y-2 md:w-1/2">
-						<h3 class="text-2xl font-bold md:text-3xl lg:text-4xl">Bienvenue</h3>
-						<h2>
-							<span class="title">Magasin</span>
-							<br>
-							<span class="title">Auto Car</span>
-						</h2>
-						<!-- bio -->
-						<div class="relative flex justify-center md:hidden">
-							<div class="absolute left-0 bottom-0 w-80 h-80"></div>
+                                <img
+                                    src="./img/home-img.webp"
+                                    alt="home-img"
+                                    class="my-10 max-w-[90%] duration-300 origin-center border-2 rotate-[4.5deg] rounded-[38px] hover:rotate-0 hover:border-blue-400"
+                                />
+                            </div>
 
-							<img src="./img/home-img.webp" alt="home-img"
-								class="my-10 max-w-[90%] duration-300 origin-center border-2 rotate-[4.5deg] rounded-[38px] hover:rotate-0 hover:border-blue-400">
-						</div>
+                            <p class="max-w-xl text-xl pb-5">
+                                Découvrez notre sélection exclusive de voitures neuves conçues pour offrir puissance, élégance et technologie de
+                                pointe. Chaque modèle est soigneusement choisi pour garantir une expérience de conduite exceptionnelle, alliant
+                                confort absolu et performances irréprochables. Trouvez dès maintenant le véhicule qui reflète votre style et votre
+                                ambition.
+                            </p>
 
-						<p class="max-w-xl text-xl pb-5">
-							Découvrez notre sélection exclusive de voitures neuves conçues pour offrir puissance,
-							élégance et technologie de pointe. Chaque modèle est soigneusement choisi pour garantir une
-							expérience de conduite exceptionnelle, alliant confort absolu et performances
-							irréprochables. Trouvez dès maintenant le véhicule qui reflète votre style et votre
-							ambition.
-						</p>
+                            <div class="flex items-center flex-wrap gap-5">
+                                <button class="btn-catalogue">
+                                    Notre catalogue
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
 
-						<div class="flex items-center flex-wrap gap-5">
-							<button class="btn-catalogue">
-								Notre catalogue
-								<i class="fa-solid fa-cart-shopping"></i>
-							</button>
+                                <div class="flex items-center gap-5">
+                                    <div class="social-icon">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div class="social-icon">
+                                        <i class="fa-brands fa-tiktok"></i>
+                                    </div>
+                                    <div class="social-icon">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-							<div class="flex items-center gap-5">
-								<div class="social-icon">
-									<i class="fa-brands fa-whatsapp"></i>
-								</div>
-								<div class="social-icon">
-									<i class="fa-brands fa-tiktok"></i>
-								</div>
-								<div class="social-icon">
-									<i class="fa-brands fa-instagram"></i>
-								</div>
-							</div>
-						</div>
-					</div>
+                        <!-- home image -->
+                        <div class="relative hidden md:w-1/2 md:flex justify-center">
+                            <div class="absolute left-0 bottom-0 w-80 h-80"></div>
 
-					<!-- home image -->
-					<div class="relative hidden md:w-1/2 md:flex justify-center">
-						<div class="absolute left-0 bottom-0 w-80 h-80"></div>
+                            <img
+                                src="./img/home-img.webp"
+                                alt="home-img"
+                                class="my-10 md:w-full lg:max-w-[80%] duration-300 origin-center border-2 rotate-[4.5deg] rounded-[38px] hover:rotate-0 hover:border-blue-400"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-						<img src="./img/home-img.webp" alt="home-img"
-							class="my-10 md:w-full lg:max-w-[80%] duration-300 origin-center border-2 rotate-[4.5deg] rounded-[38px] hover:rotate-0 hover:border-blue-400">
-					</div>
-				</div>
-			</div>
-		</section>
+            <!-- section: catalogue de véhicules -->
+            <section id="catalogue" class="relative py-5">
+                <div class="bg-white">
+                    <div class="container max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+                        <div class="flex flex-col items-center gap-5 text-center">
+                            <h2 class="subtitle">Nos véhicules</h2>
+                            <p class="max-w-2xl">Catalogue de nos véhicules luxueux</p>
+                        </div>
+                        <div class="grid grid-cols-1 py-16 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                            <div class="group">
+                                <img
+                                    src="./img/lamborghini_Sian_at_IAA_2019.jpg"
+                                    alt="Lamborghini Sian 2019"
+                                    class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                                />
+                                <h3 class="mt-4 text-sm text-gray-700">Lamborghini Sian 2019</h3>
+                                <p class="mt-1 text-lg font-medium text-gray-900">$480.000</p>
+                            </div>
+                            <div class="group">
+                                <img
+                                    src="./img/Ferrari.jpg"
+                                    alt="Ferrari"
+                                    class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                                />
+                                <h3 class="mt-4 text-sm text-gray-700">Ferrari</h3>
+                                <p class="mt-1 text-lg font-medium text-gray-900">$3.520.800</p>
+                            </div>
+                            <div class="group">
+                                <img
+                                    src="./img/honda-nsx-2013.jpg"
+                                    alt="Honda NSX 2013"
+                                    class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                                />
+                                <h3 class="mt-4 text-sm text-gray-700">Honda NSX 2013</h3>
+                                <p class="mt-1 text-lg font-medium text-gray-900">$89.000</p>
+                            </div>
+                            <div class="group">
+                                <img
+                                    src="./img/Lamborghini_Aventador.jpg"
+                                    alt="Lamborghini Aventador"
+                                    class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                                />
+                                <h3 class="mt-4 text-sm text-gray-700">Lamborghini Aventador</h3>
+                                <p class="mt-1 text-lg font-medium text-gray-900">$3.500.000</p>
+                            </div>
+                            <div class="group">
+                                <img
+                                    src="./img/mercedes-maybach-une-edition-limitee.jpg"
+                                    alt="Mercedes maybach"
+                                    class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                                />
+                                <h3 class="mt-4 text-sm text-gray-700">Mercedes maybach</h3>
+                                <p class="mt-1 text-lg font-medium text-gray-900">$640.000</p>
+                            </div>
+                            <div class="group">
+                                <img
+                                    src="./img/Honda-NSX.jpg"
+                                    alt="Honda"
+                                    class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                                />
+                                <h3 class="mt-4 text-sm text-gray-700">Honda</h3>
+                                <p class="mt-1 text-lg font-medium text-gray-900">$390.000</p>
+                            </div>
+                            <div class="group">
+                                <img
+                                    src="./img/Merco class.jpg"
+                                    alt="Mercedes class"
+                                    class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                                />
+                                <h3 class="mt-4 text-sm text-gray-700">Mercedes class</h3>
+                                <p class="mt-1 text-lg font-medium text-gray-900">$500.000</p>
+                            </div>
+                            <div class="group">
+                                <img
+                                    src="./img/lexux.jpg"
+                                    alt="Lexus"
+                                    class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                                />
+                                <h3 class="mt-4 text-sm text-gray-700">Lexus</h3>
+                                <p class="mt-1 text-lg font-medium text-gray-900">$320.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-		<!-- section: catalogue de véhicules -->
-		<section id="catalogue" class="relative py-5">
-			<div class="bg-white">
-				<div class="container max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-					<div class="flex flex-col items-center gap-5 text-center">
-						<h2 class="subtitle">
-							Nos véhicules
-						</h2>
-						<p class="max-w-2xl">Catalogue de nos véhicules luxueux</p>
-					</div>
-					<div
-						class="grid grid-cols-1 py-16 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-						<div class="group">
-							<img src="./img/lamborghini_Sian_at_IAA_2019.jpg" alt="Lamborghini Sian 2019"
-								class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]" />
-							<h3 class="mt-4 text-sm text-gray-700">Lamborghini Sian 2019</h3>
-							<p class="mt-1 text-lg font-medium text-gray-900">$480.000</p>
-						</div>
-						<div class="group">
-							<img src="./img/Ferrari.jpg" alt="Ferrari"
-								class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]" />
-							<h3 class="mt-4 text-sm text-gray-700">Ferrari</h3>
-							<p class="mt-1 text-lg font-medium text-gray-900">$3.520.800</p>
-						</div>
-						<div class="group">
-							<img src="./img/honda-nsx-2013.jpg" alt="Honda NSX 2013"
-								class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]" />
-							<h3 class="mt-4 text-sm text-gray-700">Honda NSX 2013</h3>
-							<p class="mt-1 text-lg font-medium text-gray-900">$89.000</p>
-						</div>
-						<div class="group">
-							<img src="./img/Lamborghini_Aventador.jpg" alt="Lamborghini Aventador"
-								class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]" />
-							<h3 class="mt-4 text-sm text-gray-700">Lamborghini Aventador</h3>
-							<p class="mt-1 text-lg font-medium text-gray-900">$3.500.000</p>
-						</div>
-						<div class="group">
-							<img src="./img/mercedes-maybach-une-edition-limitee.jpg" alt="Mercedes maybach"
-								class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]" />
-							<h3 class="mt-4 text-sm text-gray-700">Mercedes maybach</h3>
-							<p class="mt-1 text-lg font-medium text-gray-900">$640.000</p>
-						</div>
-						<div class="group">
-							<img src="./img/Honda-NSX.jpg" alt="Honda"
-								class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]" />
-							<h3 class="mt-4 text-sm text-gray-700">Honda</h3>
-							<p class="mt-1 text-lg font-medium text-gray-900">$390.000</p>
-						</div>
-						<div class="group">
-							<img src="./img/Merco class.jpg" alt="Mercedes class"
-								class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]" />
-							<h3 class="mt-4 text-sm text-gray-700">Mercedes class</h3>
-							<p class="mt-1 text-lg font-medium text-gray-900">$500.000</p>
-						</div>
-						<div class="group">
-							<img src="./img/lexux.jpg" alt="Lexus"
-								class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]" />
-							<h3 class="mt-4 text-sm text-gray-700">Lexus</h3>
-							<p class="mt-1 text-lg font-medium text-gray-900">$320.000</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+            <!-- section: services -->
+            <section id="services" class="relative py-10">
+                <div class="container">
+                    <!-- Title -->
+                    <div class="flex flex-col items-center gap-3 text-center mb-10">
+                        <h2 class="subtitle">Nos services</h2>
+                        <p class="max-w-2xl text-gray-600">
+                            Découvrez nos prestations premium conçues pour offrir une expérience automobile exceptionnelle.
+                        </p>
+                    </div>
 
-		<!-- section: services -->
-		<section id="services" class="relative py-10">
-			<div class="container">
-				<!-- Title -->
-				<div class="flex flex-col items-center gap-3 text-center mb-10">
-					<h2 class="subtitle">Nos services</h2>
-					<p class="max-w-2xl text-gray-600">
-						Découvrez nos prestations premium conçues pour offrir une expérience automobile exceptionnelle.
-					</p>
-				</div>
+                    <!-- Services-->
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+                        <!-- Service: Conseil automobile -->
+                        <div class="bg-white rounded-xl shadow-md p-5 flex flex-col items-center text-center">
+                            <img src="./img/conseil-auto.jpg" alt="Conseil automobile" class="rounded-lg w-full h-52 object-cover mb-5" />
+                            <h3 class="font-semibold text-lg mb-2">Conseiller automobile dédié</h3>
+                            <p class="text-gray-600">
+                                Un expert vous accompagne dans le choix du véhicule idéal selon votre style, vos besoins et votre budget.
+                            </p>
+                        </div>
 
-				<!-- Services-->
-				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-					<!-- Service: Conseil automobile -->
-					<div class="bg-white rounded-xl shadow-md p-5 flex flex-col items-center text-center">
-						<img src="./img/conseil-auto.jpg" alt="Conseil automobile"
-							class="rounded-lg w-full h-52 object-cover mb-5" />
-						<h3 class="font-semibold text-lg mb-2">Conseiller automobile dédié</h3>
-						<p class="text-gray-600">
-							Un expert vous accompagne dans le choix du véhicule idéal selon votre style, vos besoins et
-							votre budget.
-						</p>
-					</div>
+                        <!-- Service: Essai avant achat -->
+                        <div class="bg-white rounded-xl shadow-md p-5 flex flex-col items-center text-center">
+                            <img src="./img/service-essai.jpg" alt="Essai avant achat" class="rounded-lg w-full h-52 object-cover mb-5" />
+                            <h3 class="font-semibold text-lg mb-2">Essai avant achat</h3>
+                            <p class="text-gray-600">
+                                Testez votre future voiture de luxe pour ressentir la performance et le confort avant de vous décider.
+                            </p>
+                        </div>
 
-					<!-- Service: Essai avant achat -->
-					<div class="bg-white rounded-xl shadow-md p-5 flex flex-col items-center text-center">
-						<img src="./img/service-essai.jpg" alt="Essai avant achat"
-							class="rounded-lg w-full h-52 object-cover mb-5" />
-						<h3 class="font-semibold text-lg mb-2">Essai avant achat</h3>
-						<p class="text-gray-600">
-							Testez votre future voiture de luxe pour ressentir la performance et le confort avant de
-							vous décider.
-						</p>
-					</div>
+                        <!-- Service: service et reparation -->
+                        <div class="bg-white rounded-xl shadow-md p-5 flex flex-col items-center text-center">
+                            <img src="./img/service-reparation.jpg" alt="Service réparation" class="rounded-lg w-full h-52 object-cover mb-5" />
+                            <h3 class="font-semibold text-lg mb-2">Service & Réparation</h3>
+                            <p class="text-gray-600">
+                                Entretien et réparations assurés par nos techniciens experts pour garantir performance et sécurité.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-					<!-- Service: service et reparation -->
-					<div class="bg-white rounded-xl shadow-md p-5 flex flex-col items-center text-center">
-						<img src="./img/service-reparation.jpg" alt="Service réparation"
-							class="rounded-lg w-full h-52 object-cover mb-5" />
-						<h3 class="font-semibold text-lg mb-2">Service & Réparation</h3>
-						<p class="text-gray-600">
-							Entretien et réparations assurés par nos techniciens experts pour garantir performance et
-							sécurité.
-						</p>
-					</div>
+            <!-- section: contacts -->
+            <section id="contact" class="relative py-10">
+                <div class="container">
+                    <div class="flex flex-col items-center gap-3 text-center mb-10">
+                        <h2 class="subtitle">Contactez-nous !</h2>
+                        <p class="max-w-2xl">Une question ? Besoin d'un renseignement ? Notre équipe est disponible pour vous accompagner.</p>
+                    </div>
 
-				</div>
-			</div>
-		</section>
+                    <!-- contenu -->
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <!-- Infos -->
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-semibold">Adresse</h3>
+                                <p class="text-gray-600">Cotonou, Bénin</p>
+                            </div>
 
-		<!-- section: contacts -->
-		<section id="contact" class="relative py-10">
-			<div class="container">
-				<div class="flex flex-col items-center gap-3 text-center mb-10">
-					<h2 class="subtitle">Contactez-nous !</h2>
-					<p class="max-w-2xl">
-						Une question ? Besoin d'un renseignement ? Notre équipe est disponible pour vous accompagner.
-					</p>
-				</div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Téléphone</h3>
+                                <p class="text-gray-600">+229 90 00 00 00</p>
+                            </div>
 
-				<!-- contenu -->
-				<div class="grid md:grid-cols-2 gap-10">
-					<!-- Infos -->
-					<div class="space-y-6">
-						<div>
-							<h3 class="text-xl font-semibold">Adresse</h3>
-							<p class="text-gray-600">Cotonou, Bénin</p>
-						</div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Email</h3>
+                                <p class="text-gray-600">support@autocar.com</p>
+                            </div>
 
-						<div>
-							<h3 class="text-xl font-semibold">Téléphone</h3>
-							<p class="text-gray-600">+229 90 00 00 00</p>
-						</div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Horaires</h3>
+                                <p class="text-gray-600">Lundi – Samedi : 8h - 20h</p>
+                            </div>
+                        </div>
 
-						<div>
-							<h3 class="text-xl font-semibold">Email</h3>
-							<p class="text-gray-600">support@autocar.com</p>
-						</div>
+                        <!-- Formulaire -->
+                        <form class="bg-white shadow-lg p-8 rounded-xl space-y-5">
+                            <input
+                                type="text"
+                                placeholder="Votre nom"
+                                class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                            />
 
-						<div>
-							<h3 class="text-xl font-semibold">Horaires</h3>
-							<p class="text-gray-600">Lundi – Samedi : 8h - 20h</p>
-						</div>
-					</div>
+                            <input
+                                type="email"
+                                placeholder="Votre email"
+                                class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                            />
 
-					<!-- Formulaire -->
-					<form class="bg-white shadow-lg p-8 rounded-xl space-y-5">
+                            <textarea
+                                rows="4"
+                                placeholder="Votre message"
+                                class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                            ></textarea>
 
-						<input type="text" placeholder="Votre nom"
-							class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-						<input type="email" placeholder="Votre email"
-							class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+        <!-- footer -->
+        <footer class="bg-gray-900 text-gray-300 py-10">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="grid md:grid-cols-3 gap-10 text-center md:text-left">
+                    <!-- Logo + description -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">AUTO<span class="text-blue-600">CAR</span></h3>
+                        <p class="mt-3 text-sm text-gray-400 max-w-sm">
+                            Votre référence en véhicules neufs de luxe. Qualité, performance et élégance au service de votre confort.
+                        </p>
+                    </div>
 
-						<textarea rows="4" placeholder="Votre message"
-							class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                    <!-- Liens rapides -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">Navigation</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="hover:text-blue-500 duration-200">Accueil</a></li>
+                            <li><a href="#catalogue" class="hover:text-blue-500 duration-200">Catalogue</a></li>
+                            <li><a href="#services" class="hover:text-blue-500 duration-200">Services</a></li>
+                            <li><a href="#contact" class="hover:text-blue-500 duration-200">Contact</a></li>
+                        </ul>
+                    </div>
 
-						<button
-							class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition">
-							Envoyer le message
-						</button>
+                    <!-- Contact -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">Nous contacter</h3>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li>Cotonou, Bénin</li>
+                            <li>+229 90 00 00 00</li>
+                            <li>support@autocar.com</li>
+                        </ul>
+                    </div>
+                </div>
 
-					</form>
-				</div>
-			</div>
-		</section>
-	</main>
+                <!-- Ligne du bas -->
+                <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">© 2025 AutoCar. Tous droits réservés.</div>
+            </div>
+        </footer>
+    </body>
 
-	<!-- footer -->
-	<footer class="bg-gray-900 text-gray-300 py-10">
-		<div class="container mx-auto px-6 md:px-12">
-
-			<div class="grid md:grid-cols-3 gap-10 text-center md:text-left">
-
-				<!-- Logo + description -->
-				<div>
-					<h3 class="text-2xl font-bold text-white">
-						AUTO<span class="text-blue-600">CAR</span>
-					</h3>
-					<p class="mt-3 text-sm text-gray-400 max-w-sm">
-						Votre référence en véhicules neufs de luxe. Qualité, performance et élégance au service de votre
-						confort.
-					</p>
-				</div>
-
-				<!-- Liens rapides -->
-				<div>
-					<h3 class="text-lg font-semibold text-white mb-3">Navigation</h3>
-					<ul class="space-y-2">
-						<li><a href="#home" class="hover:text-blue-500 duration-200">Accueil</a></li>
-						<li><a href="#catalogue" class="hover:text-blue-500 duration-200">Catalogue</a></li>
-						<li><a href="#services" class="hover:text-blue-500 duration-200">Services</a></li>
-						<li><a href="#contact" class="hover:text-blue-500 duration-200">Contact</a></li>
-					</ul>
-				</div>
-
-				<!-- Contact -->
-				<div>
-					<h3 class="text-lg font-semibold text-white mb-3">Nous contacter</h3>
-					<ul class="space-y-2 text-gray-400 text-sm">
-						<li>Cotonou, Bénin</li>
-						<li>+229 90 00 00 00</li>
-						<li>support@autocar.com</li>
-					</ul>
-				</div>
-
-			</div>
-
-			<!-- Ligne du bas -->
-			<div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
-				© 2025 AutoCar. Tous droits réservés.
-			</div>
-		</div>
-	</footer>
-</body>
-
-<!-- SCRIPTS JS -->
-<script src="./src/js/main.js"></script>
+    <!-- SCRIPTS JS -->
+    <script src="./src/js/main.js"></script>
 </html>

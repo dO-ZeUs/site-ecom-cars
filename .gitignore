@@ -1,28 +1,38 @@
-# --- Python ---
+# Python
+
+# Environnement virtuel
+venv/
+env/
+ENV/
+.venv/
+
+# Variables d'environnement (SECRETS!)
+.env
+*.env
+
+# Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.pdb
-*.egg-info/
-*.egg
+*$py.class
+*.so
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
 *.log
-.env
-.venv/
-venv/
-ENV/
-env/
 
-# Virtual environment
-/.venv/
-/venv/
+# OS
+.DS_Store
+Thumbs.db
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.pyc
-
-# Local settings
-settings_local.py
+# Base de données locale (si tu testes en local)
+*.sqlite3
+*.db
 
 # --- Tailwind / Frontend ---
 node_modules/
