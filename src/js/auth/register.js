@@ -39,7 +39,7 @@ const confirmPassword = document.getElementById("confirm_password");
 //PATTERNS DE VERIFICATION
 const usernameRegex = /^[a-zA-Z-\s]+$/;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{8,}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 //INITIALISER LES MESSAGES D'ERREURS
 document.getElementById("username_error").innerText = "";
