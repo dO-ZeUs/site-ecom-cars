@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="/src/css/output.css" />
+        <!-- FONT AWESOME -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- REMIX ICON -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+            integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- titre -->
+        <title>Connexion | AutoCar</title>
+    </head>
+
+    <body class="min-h-screen bg-black">
+        <div class="grid grid-cols-1 lg:grid-cols-4 min-h-screen">
+            <!-- IMAGE (3/4) -->
+            <div class="lg:col-span-3 bg-cover bg-center" style="background-image: url('/img/login-bg.jpg')"></div>
+
+            <!-- FORMULAIRE (1/4) -->
+            <div class="lg:col-span-1 flex items-center justify-center bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-lg border border-white/20">
+                <div class="w-full max-w-sm text-white">
+                    <h2 class="text-3xl font-bold mb-6 text-center">Connexion</h2>
+
+                    <form class="space-y-5">
+                        <div class="flex items-center gap-3">
+                            <img src="/img/mail.svg" alt="icon" class="w-6 h-6" />
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                class="w-full mt-1 p-3 rounded-lg bg-white/10 text-white outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+
+                        <div class="flex items-center gap-3 relative w-full">
+                            <img src="/img/lock.svg" alt="icon" class="w-6 h-6" />
+                            <input
+                                id="password"
+                                type="password"
+                                placeholder="Password"
+                                class="w-full mt-1 p-3 pr-12 rounded-lg bg-white/10 text-white outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                            <!-- icône de l'oeil -->
+                            <img
+                                id="afficher_password"
+                                src="/img/visibility_eye.svg"
+                                alt="Show/Hide"
+                                class="w-6 h-6 absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer opacity-70 hover:opacity-100"
+                            />
+                        </div>
+
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold transition" type="submit">
+                            Se connecter
+                        </button>
+                    </form>
+
+                    <p class="text-center text-gray-300 mt-4">
+                        Pas de compte ?
+                        <a href="register.html" class="text-blue-400 hover:underline">Créer un compte</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="/src/js/auth/login.js"></script>
+    </body>
+</html>
